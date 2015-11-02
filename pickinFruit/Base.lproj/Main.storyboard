@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -17,15 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F47-h5-lWG">
-                                <rect key="frame" x="0.0" y="43" width="320" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F47-h5-lWG">
+                                <rect key="frame" x="0.0" y="43" width="320" height="216"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="kh9-bI-dsS" id="tZd-sa-O8y"/>
+                                </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-dd-afd">
-                                <rect key="frame" x="52" y="227" width="216" height="127"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiY-dd-afd">
+                                <rect key="frame" x="33" y="281" width="254" height="251"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="hUA-nE-rWo"/>
+                                    <constraint firstAttribute="height" constant="251" id="utb-Rl-oo8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <state key="normal" title="Spin">
+                                    <color key="titleColor" red="1" green="0.99400529449999997" blue="0.45113310880000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -34,15 +42,24 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.99400529449999997" blue="0.45113310880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F47-h5-lWG" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="23" id="GPY-34-Pjg"/>
+                            <constraint firstItem="CiY-dd-afd" firstAttribute="top" secondItem="F47-h5-lWG" secondAttribute="bottom" constant="22" id="IYu-30-AmS"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CiY-dd-afd" secondAttribute="bottom" constant="36" id="gN3-at-cZE"/>
+                            <constraint firstItem="F47-h5-lWG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tGE-HE-sDb"/>
+                            <constraint firstItem="F47-h5-lWG" firstAttribute="centerX" secondItem="CiY-dd-afd" secondAttribute="centerX" id="tJE-D7-xuc"/>
+                            <constraint firstItem="F47-h5-lWG" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="v6K-El-lby"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="fruitPicker" destination="F47-h5-lWG" id="TBz-t9-d6M"/>
+                        <outlet property="fruitPicker" destination="F47-h5-lWG" id="xzy-PF-r0o"/>
                         <outlet property="spinButton" destination="CiY-dd-afd" id="UOS-yK-TH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="281"/>
         </scene>
     </scenes>
 </document>
